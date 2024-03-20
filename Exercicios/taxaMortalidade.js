@@ -1,3 +1,31 @@
+// Entrada de dados
+const opcao = prompt("Digite 'N' para calcular a taxa de natalidade ou 'M' para calcular a taxa de mortalidade:");
+const numeroHabitantes = parseInt(prompt("Digite o número de habitantes:"));
+
+let indicador, taxa;
+
+// Processamento de dados
+switch (opcao.toUpperCase()) {
+    case 'N':
+        const numeroCriancas = parseInt(prompt("Digite o número de crianças nascidas:"));
+        indicador = "natalidade";
+        taxa = (numeroCriancas * 1000) / numeroHabitantes;
+        break;
+    case 'M':
+        const numeroObitos = parseInt(prompt("Digite o número de óbitos:"));
+        indicador = "mortalidade";
+        taxa = (numeroObitos * 1000) / numeroHabitantes;
+        break;
+    default:
+        alert("Opção inválida!");
+        break;
+}
+
+// Saída de dados
+if (indicador) {
+    alert("A taxa de " + indicador + " é: " + taxa.toFixed(2));
+}
+
 // A taxa de natalidade e a taxa de mortalidade são indicadores estatísticos de fundamental importância por ajudar a compreender aquilo que os especialistas chamam de dinâmica populacional e a entender sua relação com variáveis que influenciam o desenvolvimento, como qualidade de vida, migrações, , fatores socioeconômicos e localização. Sabendo disso, crie um programa que calcule os dois indicadores utilizando o comando switch.
 
 
