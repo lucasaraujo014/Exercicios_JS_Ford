@@ -1,14 +1,22 @@
-const golsTime1 = prompt("Quantos gols o primeiro time marcou?");
-const golsTime2 = prompt("Quantos gols o segundo time marcou?");
+// Entrada de dados
+const time1 = prompt("Digite o nome do primeiro time:");
+const time2 = prompt("Digite o nome do segundo time:");
+const placarTime1 = parseInt(prompt("Digite a quantidade de gols do " + time1 + ":"));
+const placarTime2 = parseInt(prompt("Digite a quantidade de gols do " + time2 + ":"));
 
-// Verificar o resultado do jogo
-if (golsTime1 === golsTime2) {
-    alert("O jogo terminou em empate!");
-} else if (golsTime1 > golsTime2) {
-    alert("O primeiro time venceu!");
+// Processamento
+let resultado;
+
+if (placarTime1 > placarTime2) {
+    resultado = "Vitória do " + time1;
+} else if (placarTime2 > placarTime1) {
+    resultado = "Vitória do " + time2;
 } else {
-    alert("O segundo time venceu!");
+    resultado = "Empate";
 }
+
+// Saída
+alert("Resultado: " + resultado);
 
 
 // Desenvolva um programa que recebe do usuário, o placar de um jogo de futebol (os gols de cada time) e informa se o resultado foi um empate, se a vitória foi do primeiro time ou do segundo time.
