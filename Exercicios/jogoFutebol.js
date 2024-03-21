@@ -16,7 +16,7 @@ if (placarTime1 > placarTime2) {
 }
 
 // Saída
-alert("Resultado: " + resultado);
+alert(`Resultado: " ${placarTime1} x ${placarTime2} ${resultado}`);
 
 
 // Desenvolva um programa que recebe do usuário, o placar de um jogo de futebol (os gols de cada time) e informa se o resultado foi um empate, se a vitória foi do primeiro time ou do segundo time.
